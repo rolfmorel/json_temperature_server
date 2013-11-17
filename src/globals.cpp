@@ -2,6 +2,9 @@
 
 #include "globals.h"
 
+#include "favicon.h"
+#include <WebServer.h>
+
 uint8_t const relay_pin[] = { A0, A1, 2, 3, 4, 5, 6, 7 };
 uint16_t const timer_options[] = { TIMER_OPTIONS };
 
