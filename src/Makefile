@@ -14,7 +14,7 @@ dev: default
 ARDUINO_DIR := /usr/share/arduino
 AVR_TOOLS_DIR = /usr
 
-ARDMK_DIR := $(realpath ../../Arduino-Makefile)
+ARDMK_DIR := $(realpath ../Arduino-Makefile)
 ARDMK_PATH := $(ARDMK_DIR)/bin
 
 include $(ARDMK_DIR)/arduino-mk/Arduino.mk
