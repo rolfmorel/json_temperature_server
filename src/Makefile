@@ -1,10 +1,8 @@
-ARDUINO_LIBS = Ethernet SPI OneWire
+ARDUINO_LIBS = Ethernet SPI OneWire Webduino
 BOARD_TAG = uno
 MONITOR_PORT = /dev/ttyACM*
 
 USER_LIB_PATH := server
-
-EXTRA_FLAGS = -include favicon.h
 
 default: all
 
