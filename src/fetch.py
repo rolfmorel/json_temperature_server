@@ -7,6 +7,7 @@ from os.path import isfile
 from time import sleep
 
 from requests import get
+from requests.exceptions import ConnectionError
 
 URL = "http://10.0.0.82/"
 AUTH = ("api", "secret")
@@ -24,7 +25,10 @@ if isfile("map_addr.txt"):
             addr_to_loc[addr] = location.strip()
 
 while True:
-    r = get(URL, auth=AUTH)
+    try:
+        r = get(URL, auth=AUTH)
+    except ConnectionError:
+        exit("connection timed out")
 
     if r.status_code != 200:
         print("status code was {} instead of 200".format(r.status_code),
