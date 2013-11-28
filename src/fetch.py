@@ -38,7 +38,7 @@ while True:
 
         addr = addr_to_loc.get(addr, addr)
 
-        print("temperature at {} is {}".format(addr, temp));
+        print("temperature at {} is {:.2f}".format(addr, temp));
     print()
 
     if not timeout:
