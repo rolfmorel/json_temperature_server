@@ -34,7 +34,7 @@ struct Sensor {
   uint8_t fraction;
 };
 
-extern uint32_t uptime, seconds_already_up;
+extern uint32_t seconds_already_up;
 
 extern Sensor sensors[MAX_TEMPERATURE_SENSORS];
 

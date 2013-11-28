@@ -31,8 +31,8 @@ WebServer webserver;
 
 bool resetTimer()
 {
-  if (uptime > 2147483647) {
-    seconds_already_up += (uptime / 1000);
+  if (millis() > 2147483647) {
+    seconds_already_up += (millis() / 1000);
     extern volatile unsigned long timer0_millis;
     cli();
     timer0_millis = 0;
@@ -102,9 +102,7 @@ int main(void)
   // main loop
   for (;;)
   {
-    uptime = millis();
-
-    if (set_temperature_timer < uptime)
+    if (set_temperature_timer < millis())
     {
       resetTimer();
 

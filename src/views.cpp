@@ -35,7 +35,7 @@ void serveIndexPage(WebServer &server, User &user)
   }
   server << "], ";
 
-  server << "\"seconds_up\" : " << seconds_already_up + (uptime / 1000);
+  server << "\"seconds_up\" : " << seconds_already_up + (millis() / 1000);
 
   server << " }";
 }
