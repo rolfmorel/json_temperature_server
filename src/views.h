@@ -6,8 +6,4 @@
 
 void serveIndexPage(WebServer &server, User &user);
 
-void serveValveControlPage(WebServer &server, User &user);
-
-void serveApiPage(WebServer &server, User &user);
-
 #endif
